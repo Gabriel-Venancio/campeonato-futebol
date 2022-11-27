@@ -1,6 +1,7 @@
 package br.edu.infnet.campeonatofutebol.modelo.entidade;
 
 import br.edu.infnet.campeonatofutebol.enums.Posicao;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 
@@ -28,6 +29,10 @@ public class Jogador {
         setPosicao(posicao);
         this.camisa = camisa;
         this.time = time;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getNome() {
